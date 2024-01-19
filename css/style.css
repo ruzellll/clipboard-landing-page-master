@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+* {
+    margin: 0;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+  
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-size: 18px;
+
+    text-align: center;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+
+:root{
+    --Strong-Cyan: hsl(171, 66%, 44%);
+    --Strong-Cyan-Shadow: hsl(171, 63%, 35%);
+    --Light-Blue: hsl(233, 100%, 69%);
+    --Light-Blue-Shadow: hsl(233, 43%, 52%);
+    --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+    --Grayish-Blue: hsl(201, 11%, 66%);
+}
+h1,h2{
+    color: var(--Dark-Grayish-Blue);
+}
+h1{
+    font-size: 2.5rem;
+}
+h2{
+    font-size: 2rem;
+}
+p{
+    color: var(--Grayish-Blue);
+}
+a{
+    text-decoration: none;
+}
+/****************************************************************/
+#sect1{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../images/bg-header-desktop.png);
+    background-size: cover;
+    background-position: center;
+}
+#sect1 #content{
+    width: 60%;
+}
+#sect1 #content img{
+    display: inline;
+    margin: 3rem;
+}
+#sect1 #content p{
+    padding-block: 1rem;
+}
+#sect1 #content div{
+    padding-block: 1rem;
+}
+button{
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+#iosBtn{
+    background-color: var(--Strong-Cyan);
+    box-shadow: 0px 3px 0px var(--Strong-Cyan-Shadow);
+}
+#iosBtn:active{
+    box-shadow: none;
+    transform: translateY(3px);
+}
+#macBtn{
+    background-color: var(--Light-Blue);
+    box-shadow: 0px 3px 0px var(--Light-Blue-Shadow);
+}
+#macBtn:active{
+    box-shadow: none;
+    transform: translateY(3px);
+}
+/****************************************************************/
+#sect2{
+    margin-block: 1rem;
+    display: flex;
+    justify-content: center;
+}
+#sect2 #content{
+    width: 60%;
+}
+/****************************************************************/
+#sect3{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-block: 5rem;
+}
+#sect3 div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#sect3 #computerImg{
+    transform: translateX(-2rem);
+}
+#sect3 #description{
+    text-align: left;
+    padding-inline-start: 3rem;
+    gap: 3rem;
+}
+#sect3 #description h2{
+    font-size: 1.5rem;
+    padding-block: 0.5rem;
+}
+#sect3 #description p{
+    width: 60%;
+}
+/****************************************************************/
+#sect4{
+    margin-block: 1rem;
+    display: flex;
+    justify-content: center;
+}
+#sect4 #content{
+    width: 50%;
+}
+#sect4 #content img{
+    margin-block: 3rem;
+}
+/****************************************************************/
+#sect5 h2{
+    padding-block: 1rem;
+}
+#sect5 img{
+    display: inline;
+    margin: 1rem;
+}
+#sect5 #workflowGrid{
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    margin-block: 2rem;
+}
+#sect5 #workflowGrid .grid{
+    margin: 1rem;
+    width: 25%;
+}
+/****************************************************************/
+#sect6{
+    display: flex;
+    justify-content: space-around;
+    margin: 5rem 7rem;
+}
+#sect6 img{
+    max-width: 100%;
+    height: 100%;
+}
+/****************************************************************/
+#sect7{
+    margin-block: 2rem 6rem;
+    display: flex;
+    justify-content: center;
+}
+#sect7 #content{
+    width: 60%;
+}
+#sect7 #content p{
+    margin-block: 1rem 2rem;
+}
+/****************************************************************/
+footer{
+    background-color: rgb(233, 233, 233);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding-block: 2.5rem;
+}
+footer img{
+    display: inline;
+    width: 15%;
+}
+footer #links{
+    display: grid;
+    grid-template-areas: 
+    "faq privacy guide"
+    "contact kit none";
+}
+
+#faq{grid-area: faq;}
+#contact{grid-area: contact;}
+#privacy{grid-area: privacy;}
+#kit{grid-area: kit;}
+#guide{grid-area: guide;}
+
+footer #links a{
+    width: max-content;
+    text-decoration: none;
+    color: var(--Dark-Grayish-Blue);
+    margin-block: 0.25rem;
+}
+footer #links a:hover{
+    color: var(--Strong-Cyan);
+}
+footer ion-icon{
+    width: 2rem;
+    height: 1.5rem;
+    cursor: pointer;
+    color: var(--Dark-Grayish-Blue);
+}
+footer ion-icon:hover {
+    color: var(--Strong-Cyan);
+}
+
+.attribution {
+    font-size: 11px; text-align: center; 
+    background-color: rgb(233, 233, 233);
+    color: var(--Dark-Grayish-Blue); 
+}
+.attribution a {
+    color: hsl(228, 62%, 49%); 
+}
+/****************************************************************/
+@media (max-width:1140px){
+    #sect6{
+        flex-direction: column;
+        align-items: center;
+    }
+    #sect6 img{
+        width: 40%;
+        margin: 1.5rem;
+    }
+}
+@media (max-width:1013px){
+    #sect4 #content,#sect2 #content, #sect1 #content{
+        width: 80%;
+    }
+}
+
+@media (max-width:1000px){
+    #sect3{
+        display: block;
+    }
+    #sect3 #computerImg{
+        transform: translate(0rem);
+        width: 80%;
+        margin: auto;
+    }
+    #sect3 #description {
+        text-align: center;
+        padding-inline-start: 0;
+        gap: 0;
+        display: flex;
+        flex-direction: row;
+        margin-block: 2rem;
+        align-items: baseline;
+    }
+    #sect3 #description div{
+        width: 100%;
+    }
+    #sect3 #description p {
+        width: 90%;
+    }
+}
+
+@media (max-width:981px) {
+    #sect5 #workflowGrid {
+        flex-direction: column;
+        align-items: center;
+    }
+    #sect5 #workflowGrid .grid {
+        width: 90%;
+    }
+}
+
+@media (max-width:854px) {
+    #sect3 #description {
+        flex-direction: column;
+        align-items: center;
+    }
+    #sect3 #description p {
+        width: 100%;
+    }
+    #sect3 #description div {
+        margin-block: 1.5rem;
+        width: 90%;
+    }
+}
+
+@media (max-width:819px) {
+    footer{
+        display: block;
+    }
+    footer #links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-block: 2rem;
+        gap: 1rem;
+    }
+    footer #links a{
+        display: block;
+    }
+}
+
+@media (max-width:578px) {
+    .btnGroup a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btnGroup a #iosBtn, .btnGroup a #macBtn{
+        width: clamp(300px, 90%, 400px);
+    }
+    #sect6 img{
+        width: 80%;
+    }
+    #sect7 #content {
+        width: 90%;
+    }
+}
+@media (max-width:426px) {
+    #sect4 #content,#sect2 #content, #sect1 #content{
+        width: 95%;
+    }
+}
